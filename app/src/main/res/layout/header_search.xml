@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_header"
+    android:layout_width="match_parent"
+    android:layout_height="48dip"
+    android:layout_gravity="top"
+    android:orientation="horizontal"
+    android:background="@color/main_header_bg">
+
+    <!-- 返回按钮 -->
+  <TextView
+      android:id="@+id/lx_main_address_text"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+      android:layout_weight="0"
+      android:layout_gravity="center"
+      android:textColor="@color/white"
+      android:singleLine="true"
+      android:maxEms="4"
+      android:layout_marginLeft="11dp"
+      android:textSize="12sp"
+    android:text="南京"/>
+
+    <ImageView
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="8dp"
+        android:background="@drawable/arrow_bottom_md"
+        android:visibility="visible" />
+
+
+<!--      android:layout_marginLeft="18dp"
+        android:layout_marginRight="68dp"-->
+
+    <RelativeLayout
+        android:id="@+id/lxmain_search_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18dp"
+        android:layout_weight="3"
+
+        android:background="@drawable/editsharp"
+        android:layout_gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:drawableLeft="@drawable/search"
+            android:hint="请输入查询的关键字"
+            android:imeOptions="actionDone"
+            android:singleLine="true"
+            android:textColorHint="#5C5C5C"
+            android:textSize="@dimen/text_size_11"
+            />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/sx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:layout_marginLeft="17dp"
+        android:layout_gravity="center"
+        android:text="筛选"
+        android:textColor="@color/text_color_white"
+        android:textSize="12sp" />
+
+    <ImageView
+        android:id="@+id/sx_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:layout_gravity="center"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="11dp"
+        android:background="@drawable/filter"
+        android:visibility="visible" />
+
+</LinearLayout>

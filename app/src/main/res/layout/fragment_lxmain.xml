@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <!--<include layout="@layout/layout_main_header" />-->
+    <include layout="@layout/header_search" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#d8d8d8"
+        android:fadingEdge="none"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/layout_ent_gallery"
+                android:layout_width="fill_parent"
+                android:layout_height="125dp"
+                android:background="@color/white">
+
+                <com.bruce.android.ui.loopviewpager.AutoLoopViewPager
+                    android:id="@+id/pager"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" />
+
+                <com.bruce.android.ui.viewpagerindicator.CirclePageIndicator
+                    android:id="@+id/indicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp"
+                    android:padding="5dp" />
+            </RelativeLayout>
+
+           <!-- <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/background_color" />-->
+            <GridView
+                android:id="@+id/lxmain_gridview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:numColumns="4"
+                android:stretchMode="columnWidth"
+                android:horizontalSpacing="44dp"
+                android:verticalSpacing="39dp"
+                android:scrollbars="none"
+                />
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

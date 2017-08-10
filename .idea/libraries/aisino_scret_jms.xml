@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="aisino-scret-jms">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/src/main/libs/aisino-scret-jms.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
