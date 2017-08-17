@@ -8,7 +8,7 @@
 
 
 	<RelativeLayout
-		android:background="@drawable/login_bg"
+		android:background="@drawable/mybg1"
 		android:layout_width="match_parent"
 		android:layout_height="match_parent">
 		<ImageView
@@ -25,9 +25,9 @@
 			android:layout_height="wrap_content"
 			android:layout_gravity="center_horizontal"
 			android:layout_marginTop="20dp"
-			android:text="增值税发票代开申请"
+			android:text="电子发票申请"
 			android:layout_centerHorizontal="true"
-			android:textColor="@color/black"
+			android:textColor="@color/white"
 			android:layout_below="@+id/imglogo"
 			android:textSize="20sp" />
 		<RelativeLayout
@@ -142,6 +142,42 @@
 			android:text="登录"
 			android:textColor="#ffffffff"
 			android:textSize="18.0sp" />
+
+		<LinearLayout
+			android:layout_below="@+id/btnSure"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="horizontal">
+			<Button
+				android:id="@+id/btnRegister"
+				android:layout_width="0dp"
+				android:layout_height="40.0dip"
+				android:layout_weight="1"
+				android:layout_marginLeft="18.0dip"
+				android:layout_marginRight="18.0dip"
+				android:layout_marginTop="30.0dip"
+				android:clickable="true"
+				android:enabled="true"
+				android:text="注册"
+				android:gravity="center"
+				android:textColor="#ffffffff"
+				android:textSize="15.0sp" />
+			<Button
+				android:id="@+id/btnForgetPaw"
+				android:layout_width="0dp"
+				android:layout_height="40.0dip"
+				android:layout_weight="1"
+				android:layout_marginLeft="18.0dip"
+				android:layout_marginRight="18.0dip"
+				android:layout_marginTop="30.0dip"
+				android:clickable="true"
+				android:enabled="true"
+				android:text="忘记密码"
+				android:textColor="#ffffffff"
+				android:textSize="15.0sp" />
+		</LinearLayout>
+
+
 
 		<Button
 			android:id="@+id/btnClose"

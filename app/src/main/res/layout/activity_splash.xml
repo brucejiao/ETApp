@@ -35,12 +35,12 @@
 		android:layout_alignParentBottom="true"
 		android:layout_centerHorizontal="true"
 		android:layout_marginBottom="60dp" />
-
+<!--android:src="@drawable/newer04"-->
 	<ImageView
 		android:id="@+id/guideImage"
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
 		android:scaleType="centerCrop"
-		android:src="@drawable/newer04"/>
+		android:src="@drawable/mybg3"/>
 
 </RelativeLayout>

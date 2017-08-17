@@ -26,7 +26,7 @@ public class BaseFragmentActivity extends FragmentActivity {
         }
         SystemBarTintManager tintManager = new SystemBarTintManager(this);
         tintManager.setStatusBarTintEnabled(true);
-        tintManager.setStatusBarTintResource(R.color.status_bar_bg);//通知栏所需颜色
+        tintManager.setStatusBarTintResource(R.color.my_bg_color);//通知栏所需颜色
     }
 
     @Override

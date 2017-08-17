@@ -16,6 +16,7 @@ public class Caller  {
 
     /**
      Picasso.with(mContext).load("http://pic.nipic.com/2008-07-11/20087119630716_2.jpg").resize(DeviceUtil.dp2px(mContext,73), DeviceUtil.dp2px(mContext,73)).placeholder(R.drawable.default_image).into(mIssueImgOne);
+
      */
     // IP & PORT
     //9064  正式环境（苏州服务器）

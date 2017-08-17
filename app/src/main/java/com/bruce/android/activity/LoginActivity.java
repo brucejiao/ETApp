@@ -44,6 +44,10 @@ public class LoginActivity extends SwipeBackActivity {
     Button mBtnSure;
     @Bind(R.id.btnClose)
     Button mBtnClose;
+    @Bind(R.id.btnForgetPaw)
+    Button mBtnForgetPaw;//忘记密码
+    @Bind(R.id.btnRegister)
+    Button mBtnRegister;//注册
     private boolean isLogin = false;//登录状态
     private ProgressDialog progress;
     @Override
@@ -95,8 +99,25 @@ public class LoginActivity extends SwipeBackActivity {
         });
     }
 
-    @OnClick(R.id.btnClose)
+    @OnClick({R.id.btnClose,R.id.btnForgetPaw,R.id.btnRegister})
     public void setmBtnClose(View view){
-        finish();
+        switch (view.getId())
+        {
+            //关闭
+            case R.id.btnClose:
+                finish();
+                break;
+            //忘记密码
+            case R.id.btnForgetPaw:
+                CommUtil.showToast("忘记密码",mContext);
+                break;
+            //注册
+            case R.id.btnRegister:
+                CommUtil.showToast("注册",mContext);
+                break;
+
+            default:break;
+        }
+
     }
 }

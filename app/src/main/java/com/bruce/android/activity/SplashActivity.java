@@ -18,6 +18,9 @@ import com.bruce.android.ui.viewpagerindicator.CirclePageIndicator;
 import com.bruce.android.utils.SharedPreferences;
 import com.bruce.android.utils.SpIDContents;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
 
 /**
  * Created by jjj
@@ -35,12 +38,18 @@ public class SplashActivity extends FragmentActivity {
             R.drawable.newer03,
             R.drawable.newer04
     };
+    @Bind(R.id.guideImage)
+    ImageView mGuideImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
         mContext = this;
+        ButterKnife.bind(this);
+//        Picasso.with(mContext).load("")
+//                .resize(DeviceUtil.dp2px(mContext,400), DeviceUtil.dp2px(mContext,200))
+//                .placeholder(R.drawable.default_image).into(mGuideImage);
         final boolean firstTimeUse = SharedPreferences.getInstance().getBoolean(SpIDContents.A0001, true);
         new Handler().postDelayed(new Runnable() {
             @Override

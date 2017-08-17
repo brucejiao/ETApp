@@ -4,8 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="48dip"
     android:layout_gravity="top"
-    android:background="@color/main_header_bg">
-
+    android:background="@color/my_bg_color">
+<!--android:background="@color/main_header_bg"-->
     <!-- 返回按钮 -->
 
     <Button
