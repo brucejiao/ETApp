@@ -8,6 +8,7 @@ import android.widget.Toast;
 import com.bruce.android.activity.HouseDetailActivity;
 import com.bruce.android.activity.LoginActivity;
 import com.bruce.android.activity.MainActivity;
+import com.bruce.android.activity.RegisterActivity;
 
 /**
  * 应用程序UI工具包：封装UI相关的一些操作
@@ -45,6 +46,10 @@ public class UIHelper {
         context.startActivity(intent);
     }
 
+    /**
+     * 登录界面
+     * @param context
+     */
     public static void showLogin(Activity context){
         Intent intent = new Intent(context, LoginActivity.class);
         context.startActivity(intent);
@@ -53,6 +58,15 @@ public class UIHelper {
 
     public static void showHouseDetailActivity(Activity context){
         Intent intent = new Intent(context, HouseDetailActivity.class);
+        context.startActivity(intent);
+    }
+
+    /**
+     * 注册界面
+     * @param context
+     */
+    public static void showRegisterActivity(Activity context){
+        Intent intent = new Intent(context, RegisterActivity.class);
         context.startActivity(intent);
     }
 

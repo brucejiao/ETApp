@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/white"
+    android:gravity="center_vertical|center_horizontal"
+    android:paddingRight="@dimen/dip_10"
+    android:paddingLeft="@dimen/dip_10"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="30dip"
+        android:paddingTop="10dip" >
+
+        <!--
+             <ImageView
+            android:id="@+id/dialog_title_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:background="@drawable/fish_progress_bar" />
+        -->
+        <!-- android:layout_toRightOf="@id/dialog_title_image" -->
+
+        <TextView
+            android:id="@+id/txt_Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:text="解决方案"
+            android:textColor="@color/APPBlue"
+            android:textSize="22sp" />
+    </RelativeLayout>
+
+    <!--
+         <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:layout_marginTop="5dip"
+        android:background="@drawable/lins" />
+    -->
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="11dp"
+        android:layout_marginRight="11dp"
+        android:background="@color/APPBlue" />
+    <!-- #FFADADAD  灰色线 -->
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <TextView
+            android:id="@+id/txt_content"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="30dip"
+            android:layout_marginRight="30dip"
+            android:layout_marginTop="10dip"
+            android:text="提示信息"
+            android:textColor="#FF636363" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom|center_horizontal"
+        android:orientation="horizontal"
+        android:paddingBottom="10dip"
+        android:paddingTop="10dip" >
+
+        <Button
+            android:id="@+id/dialog_button_details"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector_button"
+            android:text="查看详情"
+            android:textColor="@color/APPBlue" />
+
+        <Button
+            android:id="@+id/dialog_button_cancel"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_gravity="right"
+            android:layout_marginLeft="45dip"
+            android:layout_toRightOf="@id/dialog_button_details"
+            android:layout_weight="1"
+            android:background="@drawable/selector_button"
+            android:text="取消"
+            android:textColor="#FF636363" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -16,8 +16,8 @@
     <corners android:radius="2dp" />
 
     <stroke
-        android:width="5px"
-        android:color="@color/white" />
+        android:width="1px"
+        android:color="@color/my_bg_color" />
 
     <solid android:color="@color/white" />
 </shape>

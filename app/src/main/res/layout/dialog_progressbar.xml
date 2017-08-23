@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/editsharp"
+    android:gravity="center_vertical|center_horizontal"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="30dip"
+        android:paddingTop="10dip" >
+
+        <TextView
+            android:id="@+id/txt_progressbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:text="正在下载,请稍等..."
+            android:textColor="#FF0598D8"
+            android:textSize="22sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="11dp"
+        android:layout_marginRight="11dp"
+        android:background="#FF0598D8" />
+
+    <com.bruce.android.ui.TextProgressBar
+        android:id="@+id/updateProgressbar"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="15dip" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom|center_horizontal"
+        android:paddingBottom="10dip"
+        android:paddingTop="15dip" >
+
+        <Button
+            android:id="@+id/dialog_progressbar_cancel"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:background="@drawable/bottom_panel_sharp_click"
+            android:text="取消"
+            android:textColor="#FF0598D8" />
+    </RelativeLayout>
+
+</LinearLayout>

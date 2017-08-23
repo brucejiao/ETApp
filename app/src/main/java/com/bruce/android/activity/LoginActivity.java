@@ -1,7 +1,6 @@
 package com.bruce.android.activity;
 
 import android.app.ProgressDialog;
-import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -9,6 +8,7 @@ import android.widget.EditText;
 
 import com.alibaba.fastjson.JSON;
 import com.bruce.android.R;
+import com.bruce.android.common.AppContext;
 import com.bruce.android.http.Caller;
 import com.bruce.android.http.HttpClient;
 import com.bruce.android.http.HttpResponseHandler;
@@ -18,6 +18,7 @@ import com.bruce.android.ui.UIHelper;
 import com.bruce.android.ui.swipebacklayout.SwipeBackActivity;
 import com.bruce.android.utils.CommUtil;
 import com.bruce.android.utils.SharedPreferences;
+import com.bruce.android.utils.UpdateVersionService;
 
 import java.util.HashMap;
 
@@ -35,7 +36,7 @@ import static com.bruce.android.utils.Contents.SHARE_LOGIN_ISLOGIN;
  login
  */
 public class LoginActivity extends SwipeBackActivity {
-    private Context mContext;
+    private LoginActivity mContext;
     @Bind(R.id.phone)
     EditText mUserName;
     @Bind(R.id.code)
@@ -55,9 +56,13 @@ public class LoginActivity extends SwipeBackActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_tax);
         ButterKnife.bind(this);
-        mContext = LoginActivity.this;
+        AppContext.getInstance();
+        mContext = this;
         mUserName.setText("12345678902");
         mCode.setText("123123");
+        // 检测版本是否更新
+        UpdateVersionService updateService = new UpdateVersionService(LoginActivity.this);
+        updateService.checkUpdate();
     }
 
     @OnClick(R.id.btnSure)
@@ -113,7 +118,7 @@ public class LoginActivity extends SwipeBackActivity {
                 break;
             //注册
             case R.id.btnRegister:
-                CommUtil.showToast("注册",mContext);
+                UIHelper.showRegisterActivity(mContext);
                 break;
 
             default:break;

@@ -35,14 +35,14 @@ public class Caller  {
      * @param idCard
      * @return
      */
-    public static String getRegisterParams(String regisPhone,String regisPaw,String idCard,String userRemark){
+    public static String getRegisterParams(String regisPhone,String regisPaw,String idCard,String mail){
         Map<String,String> map = new HashMap<String,String>();
         map.put("type", "register.api");
-        map.put("user_phone", regisPhone);
-        map.put("user_pass", regisPaw);
-        map.put("user_card", idCard);
-        map.put("user_state", "1");
-        map.put("user_remark ", userRemark);
+        map.put("phoneNum", regisPhone);
+        map.put("userPass", regisPaw);
+        map.put("idCard", idCard);
+        map.put("type", "1");
+        map.put("mail ", mail);
         JSONObject json = new JSONObject(map);
         String secret = SafaUtils.encrypt(json.toString());
         LogUtil.i("====注册数据====", json.toString());
@@ -234,7 +234,6 @@ public class Caller  {
 
 
     /**获取公司信息
-     * @param idCard
      * @param cardNum
      * @return
      */
